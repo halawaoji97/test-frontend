@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Auth from './components/Auth'
+import CreateBook from './components/CreateBook'
+import Dashboard from './components/Dashboard'
+import Register from './components/Register'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function setToken() {
+  // localStorage.setItem('token', 'data')
 }
 
-export default App;
+function getToken() {
+  return localStorage.getItem('token')
+}
+
+function App() {
+  const token = getToken()
+
+  return (
+    <Routes>
+      <Route path='/' element={<Dashboard />} />
+      <Route path='/signup' element={<Register />} />
+      <Route path='/create' element={<CreateBook />} />
+      <Route
+        path='/signin'
+        element={<Auth setToken={setToken} token={token} />}
+      />
+    </Routes>
+  )
+}
+
+export default App
