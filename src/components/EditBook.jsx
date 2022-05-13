@@ -51,16 +51,19 @@ const EditBook = () => {
   }
 
   return (
-    <div class='block p-6 container mx-auto my-10 rounded-lg shadow-lg bg-white max-w-sm'>
+    <div className='block p-6 container mx-auto my-10 rounded-lg shadow-lg bg-white max-w-sm'>
       <form>
         <input type='hidden' value={id} />
-        <div class='form-group mb-6'>
-          <label for='isbn' class='form-label inline-block mb-2 text-gray-700'>
+        <div className='form-group mb-6'>
+          <label
+            htmlFor='isbn'
+            className='form-label inline-block mb-2 text-gray-700'
+          >
             ISBN
           </label>
           <input
             type='text'
-            class='form-control
+            className='form-control
         block
         w-full
         px-3
@@ -82,13 +85,16 @@ const EditBook = () => {
             name='isbn'
           />
         </div>
-        <div class='form-group mb-6'>
-          <label for='title' class='form-label inline-block mb-2 text-gray-700'>
+        <div className='form-group mb-6'>
+          <label
+            htmlFor='title'
+            className='form-label inline-block mb-2 text-gray-700'
+          >
             Title
           </label>
           <input
             type='text'
-            class='form-control
+            className='form-control
         block
         w-full
         px-3
@@ -110,16 +116,16 @@ const EditBook = () => {
             value={title}
           />
         </div>
-        <div class='form-group mb-6'>
+        <div className='form-group mb-6'>
           <label
-            for='author'
-            class='form-label inline-block mb-2 text-gray-700'
+            htmlFor='author'
+            className='form-label inline-block mb-2 text-gray-700'
           >
             Author
           </label>
           <input
             type='text'
-            class='form-control
+            className='form-control
         block
         w-full
         px-3
@@ -141,16 +147,16 @@ const EditBook = () => {
             value={author}
           />
         </div>
-        <div class='form-group mb-6'>
+        <div className='form-group mb-6'>
           <label
-            for='publiser'
-            class='form-label inline-block mb-2 text-gray-700'
+            htmlFor='publiser'
+            className='form-label inline-block mb-2 text-gray-700'
           >
             Publiser
           </label>
           <input
             type='text'
-            class='form-control
+            className='form-control
         block
         w-full
         px-3
@@ -172,9 +178,9 @@ const EditBook = () => {
             value={publisher}
           />
         </div>
-        <div class='form-group mb-6'>
+        <div className='form-group mb-6'>
           <textarea
-            class='
+            className='
         form-control
         block
         w-full
@@ -201,7 +207,7 @@ const EditBook = () => {
         </div>
         <button
           type='submit'
-          class='
+          className='
       w-full
       px-6
       py-2.5
@@ -225,7 +231,7 @@ const EditBook = () => {
         </button>
         <Link
           to='/'
-          class='text-blue-600 text-center block w-full my-4 bg-gray-100 py-2 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out'
+          className='text-blue-600 text-center block w-full my-4 bg-gray-100 py-2 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out'
         >
           Cancel
         </Link>

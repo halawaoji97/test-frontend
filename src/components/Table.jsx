@@ -24,52 +24,52 @@ const Table = ({ book }) => {
       })
   }
   return (
-    <div class='flex flex-col shadow-md p-4'>
-      <div class='overflow-x-auto sm:-mx-6 lg:-mx-8'>
-        <div class='py-2 inline-block min-w-full sm:px-6 lg:px-8'>
-          <div class='overflow-hidden'>
-            <table class='min-w-full'>
-              <thead class='border-b'>
+    <div className='flex flex-col shadow-md p-4'>
+      <div className='overflow-x-auto sm:-mx-6 lg:-mx-8'>
+        <div className='py-2 inline-block min-w-full sm:px-6 lg:px-8'>
+          <div className='overflow-hidden'>
+            <table className='min-w-full'>
+              <thead className='border-b'>
                 <tr>
                   <th
                     scope='col'
-                    class='text-sm font-medium text-gray-900 px-6 py-4 text-left'
+                    className='text-sm font-medium text-gray-900 px-6 py-4 text-left'
                   >
                     No
                   </th>
                   <th
                     scope='col'
-                    class='text-sm font-medium text-gray-900 px-6 py-4 text-left'
+                    className='text-sm font-medium text-gray-900 px-6 py-4 text-left'
                   >
                     ISBN
                   </th>
                   <th
                     scope='col'
-                    class='text-sm font-medium text-gray-900 px-6 py-4 text-left'
+                    className='text-sm font-medium text-gray-900 px-6 py-4 text-left'
                   >
                     Author
                   </th>
                   <th
                     scope='col'
-                    class='text-sm font-medium text-gray-900 px-6 py-4 text-left'
+                    className='text-sm font-medium text-gray-900 px-6 py-4 text-left'
                   >
                     Title
                   </th>
                   <th
                     scope='col'
-                    class='text-sm font-medium text-gray-900 px-6 py-4 text-left'
+                    className='text-sm font-medium text-gray-900 px-6 py-4 text-left'
                   >
                     Publiser
                   </th>
                   <th
                     scope='col'
-                    class='text-sm font-medium text-gray-900 px-6 py-4 text-left'
+                    className='text-sm font-medium text-gray-900 px-6 py-4 text-left'
                   >
                     Description
                   </th>
                   <th
                     scope='col'
-                    class='text-sm font-medium text-gray-900 px-6 py-4 text-left'
+                    className='text-sm font-medium text-gray-900 px-6 py-4 text-left'
                   >
                     Action
                   </th>
@@ -79,45 +79,45 @@ const Table = ({ book }) => {
                 {book.data &&
                   book.data.map((item, index) => {
                     return (
-                      <tr>
+                      <tr key={index}>
                         <td
-                          class='px-6 py-4 whitespace-no-wrap border-b border-gray-200'
+                          className='px-6 py-4 whitespace-no-wrap border-b border-gray-200'
                           data-label='#'
                         >
                           {index + 1}
                         </td>
                         <td
-                          class='px-6 py-4 whitespace-no-wrap border-b border-gray-200'
+                          className='px-6 py-4 whitespace-no-wrap border-b border-gray-200'
                           data-label='First'
                         >
                           {item.isbn}
                         </td>
                         <td
-                          class='px-6 py-4 whitespace-no-wrap border-b border-gray-200'
+                          className='px-6 py-4 whitespace-no-wrap border-b border-gray-200'
                           data-label='First'
                         >
                           {item.title}
                         </td>
                         <td
-                          class='px-6 py-4 whitespace-no-wrap border-b border-gray-200'
+                          className='px-6 py-4 whitespace-no-wrap border-b border-gray-200'
                           data-label='Last'
                         >
                           {item.author}
                         </td>
                         <td
-                          class='px-6 py-4 whitespace-no-wrap border-b border-gray-200'
+                          className='px-6 py-4 whitespace-no-wrap border-b border-gray-200'
                           data-label='Last'
                         >
                           {item.publisher}
                         </td>
                         <td
-                          class='px-6 py-4 whitespace-no-wrap border-b border-gray-200'
+                          className='px-6 py-4 whitespace-no-wrap border-b border-gray-200'
                           data-label='Handle'
                         >
                           {item.description}
                         </td>
                         <td
-                          class='px-6 py-4 whitespace-no-wrap border-b border-gray-200'
+                          className='px-6 py-4 whitespace-no-wrap border-b border-gray-200'
                           data-label='Handle'
                         >
                           <button
