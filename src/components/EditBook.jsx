@@ -80,9 +80,9 @@ const EditBook = () => {
         focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none'
             id='isbn'
             placeholder='Enter ISBN'
-            value={isbn}
             onChange={(e) => onChange(e)}
             name='isbn'
+            value={isbn}
           />
         </div>
         <div className='form-group mb-6'>
