@@ -6,6 +6,7 @@ const Table = ({ book }) => {
   const token = localStorage.getItem('token', 'data')
   const api = 'http://159.223.57.121:8080/books'
   const navigate = useNavigate()
+  const id = localStorage.getItem('id', 'data')
 
   const removeBook = (id) => {
     axios
@@ -127,7 +128,13 @@ const Table = ({ book }) => {
                           </button>
                           <button
                             className='bg-blue-500 p-2 text-white mr-2'
-                            onClick={() => navigate(`/edit/${item.id}`)}
+                            onClick={() =>
+                              navigate(`/edit/${item.id}`, {
+                                state: {
+                                  book: item
+                                }
+                              })
+                            }
                           >
                             Edit
                           </button>
